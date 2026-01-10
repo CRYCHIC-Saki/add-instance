@@ -1,0 +1,34 @@
+{
+  "instance_id": "SWE-Bench-Verified/python/maintenance/bugfix/1756507b",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "python"
+  ],
+  "repo": {
+    "origin": "github://sympy/sympy",
+    "commit_pre": "1923822ddf8265199dbd9ef9ce09641d3fd042b9"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "diophantine: incomplete results depending on syms order with permute=True\n```\r\nIn [10]: diophantine(n**4 + m**4 - 2**4 - 3**4, syms=(m,n), permute=True)\r\nOut[10]: {(-3, -2), (-3, 2), (-2, -3), (-2, 3), (2, -3), (2, 3), (3, -2), (3, 2)}\r\n\r\nIn [11]: diophantine(n**4 + m**4 - 2**4 - 3**4, syms=(n,m), permute=True)\r\nOut[11]: {(3, 2)}\r\n```\r\n\ndiophantine: incomplete results depending on syms order with permute=True\n```\r\nIn [10]: diophantine(n**4 + m**4 - 2**4 - 3**4, syms=(m,n), permute=True)\r\nOut[10]: {(-3, -2), (-3, 2), (-2, -3), (-2, 3), (2, -3), (2, 3), (3, -2), (3, 2)}\r\n\r\nIn [11]: diophantine(n**4 + m**4 - 2**4 - 3**4, syms=(n,m), permute=True)\r\nOut[11]: {(3, 2)}\r\n```\r\n\n"
+  },
+  "gold_slice": {
+    "file": [
+      "sympy/solvers/diophantine.py"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/SWE-Bench-Verified__python__maintenance__bugfix__1756507b.diff"
+  },
+  "build": {
+    "cmd_test": "pytest -q"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "sympy__sympy-18189"
+}

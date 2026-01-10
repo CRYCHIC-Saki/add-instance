@@ -1,0 +1,34 @@
+{
+  "instance_id": "SWE-Bench-Verified/python/maintenance/bugfix/05d282ec",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "python"
+  ],
+  "repo": {
+    "origin": "github://sympy/sympy",
+    "commit_pre": "28d913d3cead6c5646307ffa6540b21d65059dfd"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "Zero-argument Min() and Max()\nRight now `Min()` and `Max()` with no arguments raise `ValueError: The Max/Min functions must have arguments.`. It might be mathematically more convenient to have them return `oo` and `-oo`, respectively. See https://en.wikipedia.org/wiki/Empty_set#Extended_real_numbers for why these are valid answers mathematically. \n"
+  },
+  "gold_slice": {
+    "file": [
+      "sympy/functions/elementary/miscellaneous.py"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/SWE-Bench-Verified__python__maintenance__bugfix__05d282ec.diff"
+  },
+  "build": {
+    "cmd_test": "pytest -q"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "sympy__sympy-15809"
+}

@@ -1,0 +1,34 @@
+{
+  "instance_id": "SWE-Bench-Verified/python/maintenance/bugfix/cecff61c",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "python"
+  ],
+  "repo": {
+    "origin": "github://django/django",
+    "commit_pre": "0b0998dc151feb77068e2387c34cc50ef6b356ae"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "Reduce Add/RemoveIndex migration operations.\nDescription\n\t\nWe should reduce AddIndex/RemoveIndex operations when optimizing migration operations.\n"
+  },
+  "gold_slice": {
+    "file": [
+      "django/db/migrations/operations/models.py"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/SWE-Bench-Verified__python__maintenance__bugfix__cecff61c.diff"
+  },
+  "build": {
+    "cmd_test": "pytest -q"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "django__django-16819"
+}
