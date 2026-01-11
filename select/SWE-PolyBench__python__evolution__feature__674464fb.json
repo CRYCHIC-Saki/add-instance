@@ -1,0 +1,34 @@
+{
+  "instance_id": "SWE-PolyBench/python/evolution/feature/674464fb",
+  "version": "v0.1",
+  "category": "evolution",
+  "subcategory": "feature",
+  "languages": [
+    "python"
+  ],
+  "repo": {
+    "origin": "github://huggingface/transformers",
+    "commit_pre": "edb170238febf7fc3e3278ed5b9ca0b2c40c70e3"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "Exclude the load balancing loss of padding tokens in Mixtral-8x7B\n### Feature request\n\nThe auxiliary loss in Mixtral-MoE shouldn't **include the loss from padding tokens**. \n\n### Motivation\n\nI think it is better to change the function \r\n[load_balancing_loss_func](https://github.com/huggingface/transformers/blob/main/src/transformers/models/mixtral/modeling_mixtral.py#L77) by adding an additional parameter: `attention_mask` and change the implementation inside to remove the loss from padding tokens\n\n### Your contribution\n\nI would be happy to review the PR implemeting this feature !\n"
+  },
+  "gold_slice": {
+    "file": [
+      "src/transformers/models/mixtral/modeling_mixtral.py"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/SWE-PolyBench__python__evolution__feature__674464fb.diff"
+  },
+  "build": {
+    "cmd_test": "pytest -v --tb=short --show-capture=no --json-report /testbed/tests/models/mixtral/test_modeling_mixtral.py"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "huggingface__transformers-28517"
+}
