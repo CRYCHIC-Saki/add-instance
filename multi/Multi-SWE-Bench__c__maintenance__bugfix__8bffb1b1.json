@@ -1,0 +1,35 @@
+{
+  "instance_id": "Multi-SWE-Bench/c/maintenance/bugfix/8bffb1b1",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "c"
+  ],
+  "repo": {
+    "origin": "github://facebook/zstd",
+    "commit_pre": "04212178b50131ecbbf7bc2ffcce4d5ddcfd8e11"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "Add ZSTD_CCtx(Param)?_getParameter() function\nCloses #1096."
+  },
+  "gold_slice": {
+    "file": [
+      "lib/compress/zstd_compress.c",
+      "lib/zstd.h"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__c__maintenance__bugfix__8bffb1b1.diff"
+  },
+  "build": {
+    "cmd_test": "make test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "facebook__zstd-1105"
+}

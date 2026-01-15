@@ -1,0 +1,67 @@
+{
+  "instance_id": "Multi-SWE-Bench/typescript/maintenance/bugfix/5aed9f96",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "typescript"
+  ],
+  "repo": {
+    "origin": "github://mui/material-ui",
+    "commit_pre": "fca2ddf44ce5518b82a464cfa806e30f1f973e5c"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "[Stack] Add new component\n<!-- Thanks so much for your PR, your contribution is appreciated! ❤️ -->\r\n\r\nUsing a similar API to the Grid component this provides a simple wrapper around Flexbox styles. Until there is better support for the [gap property](https://caniuse.com/?search=gap) we're relying on setting child margins. A good case for keeping margins in the future is they can accept negative values where gap cannot. This is useful for things like avatar stacks.\r\n\r\n- [x] I have followed (at least) the [PR section of the contributing guide](https://github.com/mui-org/material-ui/blob/HEAD/CONTRIBUTING.md#sending-a-pull-request).\r\n\r\nCloses #18158\r\n\r\nPreview: https://deploy-preview-25149--material-ui.netlify.app/components/stack/"
+  },
+  "gold_slice": {
+    "file": [
+      "docs/pages/api-docs/stack.js",
+      "docs/pages/api-docs/stack.json",
+      "docs/pages/components/stack.js",
+      "docs/src/pages.ts",
+      "docs/src/pages/components/buttons/UploadButtons.js",
+      "docs/src/pages/components/buttons/UploadButtons.tsx",
+      "docs/src/pages/components/stack/BasicStack.js",
+      "docs/src/pages/components/stack/BasicStack.tsx",
+      "docs/src/pages/components/stack/DirectionStack.js",
+      "docs/src/pages/components/stack/DirectionStack.tsx",
+      "docs/src/pages/components/stack/DividerStack.js",
+      "docs/src/pages/components/stack/DividerStack.tsx",
+      "docs/src/pages/components/stack/InteractiveStack.js",
+      "docs/src/pages/components/stack/InteractiveStack.tsx",
+      "docs/src/pages/components/stack/ResponsiveStack.js",
+      "docs/src/pages/components/stack/ResponsiveStack.tsx",
+      "docs/src/pages/components/stack/stack.md",
+      "docs/src/pagesApi.js",
+      "docs/translations/api-docs/stack/stack-de.json",
+      "docs/translations/api-docs/stack/stack-es.json",
+      "docs/translations/api-docs/stack/stack-fr.json",
+      "docs/translations/api-docs/stack/stack-ja.json",
+      "docs/translations/api-docs/stack/stack-pt.json",
+      "docs/translations/api-docs/stack/stack-ru.json",
+      "docs/translations/api-docs/stack/stack-zh.json",
+      "docs/translations/api-docs/stack/stack.json",
+      "docs/translations/translations.json",
+      "packages/material-ui-system/src/breakpoints.js",
+      "packages/material-ui/src/Stack/Stack.d.ts",
+      "packages/material-ui/src/Stack/Stack.js",
+      "packages/material-ui/src/Stack/index.d.ts",
+      "packages/material-ui/src/Stack/index.js",
+      "packages/material-ui/src/index.d.ts",
+      "packages/material-ui/src/index.js"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__typescript__maintenance__bugfix__5aed9f96.diff"
+  },
+  "build": {
+    "cmd_test": "npm test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "mui__material-ui-25149"
+}

@@ -1,0 +1,34 @@
+{
+  "instance_id": "Multi-SWE-Bench/java/maintenance/bugfix/ef567ef1",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "java"
+  ],
+  "repo": {
+    "origin": "github://alibaba/fastjson2",
+    "commit_pre": "45cc6b34343bc133a03c632d6c9dd4a2d895e2e9"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "fix #2558\nplease refer to this [issue](https://github.com/alibaba/fastjson2/issues/2558)"
+  },
+  "gold_slice": {
+    "file": [
+      "core/src/main/java/com/alibaba/fastjson2/util/TypeUtils.java"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__java__maintenance__bugfix__ef567ef1.diff"
+  },
+  "build": {
+    "cmd_test": "mvn -q test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "alibaba__fastjson2-2559"
+}

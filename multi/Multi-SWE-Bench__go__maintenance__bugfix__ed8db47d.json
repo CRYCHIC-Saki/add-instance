@@ -1,0 +1,34 @@
+{
+  "instance_id": "Multi-SWE-Bench/go/maintenance/bugfix/ed8db47d",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "go"
+  ],
+  "repo": {
+    "origin": "github://zeromicro/go-zero",
+    "commit_pre": "af05219b70c5e18542ebb499b18a1dff6ffacc6d"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "fix: The validation of tag \"options\" is not working with int/uint type\nfix #1958"
+  },
+  "gold_slice": {
+    "file": [
+      "core/mapping/unmarshaler.go"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__go__maintenance__bugfix__ed8db47d.diff"
+  },
+  "build": {
+    "cmd_test": "go test ./..."
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "zeromicro__go-zero-1969"
+}

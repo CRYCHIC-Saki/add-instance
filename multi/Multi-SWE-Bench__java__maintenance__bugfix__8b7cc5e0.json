@@ -1,0 +1,34 @@
+{
+  "instance_id": "Multi-SWE-Bench/java/maintenance/bugfix/8b7cc5e0",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "java"
+  ],
+  "repo": {
+    "origin": "github://alibaba/fastjson2",
+    "commit_pre": "12b40c7ba3e7c30e35977195770c80beb34715c5"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "add new method JSON.parseObject(String, Type, JSONReader.Context)\n### What this PR does / why we need it?\r\n\r\nadd new method JSON.parseObject(String, Type, JSONReader.Context), ref #2774\r\n\r\nclose #2774\r\n\r\n### Summary of your change\r\n\r\n\r\n\r\n#### Please indicate you've done the following:\r\n\r\n- [ ] Made sure tests are passing and test coverage is added if needed.\r\n- [ ] Made sure commit message follow the rule of [Conventional Commits specification](https://www.conventionalcommits.org/).\r\n- [ ] Considered the docs impact and opened a new docs issue or PR with docs changes if needed."
+  },
+  "gold_slice": {
+    "file": [
+      "core/src/main/java/com/alibaba/fastjson2/JSON.java"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__java__maintenance__bugfix__8b7cc5e0.diff"
+  },
+  "build": {
+    "cmd_test": "mvn -q test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "alibaba__fastjson2-2775"
+}

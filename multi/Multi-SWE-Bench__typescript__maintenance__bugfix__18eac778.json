@@ -1,0 +1,34 @@
+{
+  "instance_id": "Multi-SWE-Bench/typescript/maintenance/bugfix/18eac778",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "typescript"
+  ],
+  "repo": {
+    "origin": "github://vuejs/core",
+    "commit_pre": "68e5cc6ac8fc289372831c5fbdff09e63728fc00"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "fix(runtime-core): properly handle the nested flushPostFlushCbs\nclose #10003"
+  },
+  "gold_slice": {
+    "file": [
+      "packages/runtime-core/src/scheduler.ts"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__typescript__maintenance__bugfix__18eac778.diff"
+  },
+  "build": {
+    "cmd_test": "npm test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "vuejs__core-10027"
+}

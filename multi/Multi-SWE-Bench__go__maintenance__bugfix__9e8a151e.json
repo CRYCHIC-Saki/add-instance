@@ -1,0 +1,69 @@
+{
+  "instance_id": "Multi-SWE-Bench/go/maintenance/bugfix/9e8a151e",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "go"
+  ],
+  "repo": {
+    "origin": "github://cli/cli",
+    "commit_pre": "26f3601a81cbeb3fd5087dfa63775caa04ccc1bc"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "Add headers to all tables\nResolves #8090"
+  },
+  "gold_slice": {
+    "file": [
+      "go.mod",
+      "go.sum",
+      "internal/tableprinter/table_printer.go",
+      "internal/text/text.go",
+      "pkg/cmd/cache/list/list.go",
+      "pkg/cmd/codespace/list.go",
+      "pkg/cmd/codespace/ports.go",
+      "pkg/cmd/codespace/view.go",
+      "pkg/cmd/extension/command.go",
+      "pkg/cmd/gist/list/list.go",
+      "pkg/cmd/gpg-key/list/list.go",
+      "pkg/cmd/issue/develop/develop.go",
+      "pkg/cmd/issue/shared/display.go",
+      "pkg/cmd/label/list.go",
+      "pkg/cmd/org/list/list.go",
+      "pkg/cmd/pr/checks/output.go",
+      "pkg/cmd/pr/list/list.go",
+      "pkg/cmd/project/field-list/field_list.go",
+      "pkg/cmd/project/item-list/item_list.go",
+      "pkg/cmd/project/list/list.go",
+      "pkg/cmd/release/list/list.go",
+      "pkg/cmd/release/view/view.go",
+      "pkg/cmd/repo/deploy-key/list/list.go",
+      "pkg/cmd/repo/list/list.go",
+      "pkg/cmd/ruleset/list/list.go",
+      "pkg/cmd/run/list/list.go",
+      "pkg/cmd/search/commits/commits.go",
+      "pkg/cmd/search/repos/repos.go",
+      "pkg/cmd/search/shared/shared.go",
+      "pkg/cmd/secret/list/list.go",
+      "pkg/cmd/ssh-key/list/list.go",
+      "pkg/cmd/status/status.go",
+      "pkg/cmd/variable/list/list.go",
+      "pkg/cmd/workflow/list/list.go",
+      "pkg/cmd/workflow/view/view.go",
+      "pkg/iostreams/color.go"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__go__maintenance__bugfix__9e8a151e.diff"
+  },
+  "build": {
+    "cmd_test": "go test ./..."
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "cli__cli-8157"
+}

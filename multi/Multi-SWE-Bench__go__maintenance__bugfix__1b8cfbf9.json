@@ -1,0 +1,37 @@
+{
+  "instance_id": "Multi-SWE-Bench/go/maintenance/bugfix/1b8cfbf9",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "go"
+  ],
+  "repo": {
+    "origin": "github://cli/cli",
+    "commit_pre": "026b07d1cfbf23a3ccb4d4703a2496d65e177fcc"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "Feature/fork repo to org\nThis commit adds functionality to fork a repository into an organization.\r\n\r\nCloses #1247"
+  },
+  "gold_slice": {
+    "file": [
+      "api/queries_repo.go",
+      "pkg/cmd/pr/create/create.go",
+      "pkg/cmd/repo/fork/fork.go",
+      "pkg/cmd/repo/fork/orgForkResult.json"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__go__maintenance__bugfix__1b8cfbf9.diff"
+  },
+  "build": {
+    "cmd_test": "go test ./..."
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "cli__cli-3608"
+}

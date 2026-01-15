@@ -1,0 +1,49 @@
+{
+  "instance_id": "Multi-SWE-Bench/javascript/maintenance/bugfix/a98dbc6f",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "javascript"
+  ],
+  "repo": {
+    "origin": "github://sveltejs/svelte",
+    "commit_pre": "c66bf178aae18c2b4d8ac189a48cf10c47e4d417"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "chore: provide links to documentation for errors/warnings\ncloses #11305\r\n\r\nCompanion PR: https://github.com/sveltejs/svelte.dev/pull/965"
+  },
+  "gold_slice": {
+    "file": [
+      ".changeset/breezy-feet-knock.md",
+      "packages/svelte/scripts/process-messages/index.js",
+      "packages/svelte/scripts/process-messages/templates/client-errors.js",
+      "packages/svelte/scripts/process-messages/templates/client-warnings.js",
+      "packages/svelte/scripts/process-messages/templates/compile-errors.js",
+      "packages/svelte/scripts/process-messages/templates/compile-warnings.js",
+      "packages/svelte/scripts/process-messages/templates/server-errors.js",
+      "packages/svelte/scripts/process-messages/templates/shared-errors.js",
+      "packages/svelte/scripts/process-messages/templates/shared-warnings.js",
+      "packages/svelte/src/compiler/errors.js",
+      "packages/svelte/src/compiler/warnings.js",
+      "packages/svelte/src/internal/client/errors.js",
+      "packages/svelte/src/internal/client/warnings.js",
+      "packages/svelte/src/internal/server/errors.js",
+      "packages/svelte/src/internal/shared/errors.js",
+      "packages/svelte/src/internal/shared/warnings.js"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__javascript__maintenance__bugfix__a98dbc6f.diff"
+  },
+  "build": {
+    "cmd_test": "npm test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "sveltejs__svelte-14629"
+}

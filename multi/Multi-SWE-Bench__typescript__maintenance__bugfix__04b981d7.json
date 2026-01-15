@@ -1,0 +1,34 @@
+{
+  "instance_id": "Multi-SWE-Bench/typescript/maintenance/bugfix/04b981d7",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "typescript"
+  ],
+  "repo": {
+    "origin": "github://mui/material-ui",
+    "commit_pre": "0ba283880545390fc6408e408dcde93ed5de178c"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "[Autocomplete] Fixed autocomplete's existing option selection\n<!-- Thanks so much for your PR, your contribution is appreciated! ❤️ -->\r\n\r\n- [x] I have followed (at least) the [PR section of the contributing guide](https://github.com/mui/material-ui/blob/HEAD/CONTRIBUTING.md#sending-a-pull-request).\r\n\r\n---\r\n\r\nFixes #36336 \r\n\r\nCodeSandbox: https://codesandbox.io/s/mui-autocomplete-bug-fix-forked-033f61"
+  },
+  "gold_slice": {
+    "file": [
+      "packages/mui-base/src/useAutocomplete/useAutocomplete.js"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__typescript__maintenance__bugfix__04b981d7.diff"
+  },
+  "build": {
+    "cmd_test": "npm test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "mui__material-ui-36659"
+}

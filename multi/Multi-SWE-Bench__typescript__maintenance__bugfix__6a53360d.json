@@ -1,0 +1,36 @@
+{
+  "instance_id": "Multi-SWE-Bench/typescript/maintenance/bugfix/6a53360d",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "typescript"
+  ],
+  "repo": {
+    "origin": "github://vuejs/core",
+    "commit_pre": "dadb3632a0f824f6e6a1c246ed8788bea5cbcad6"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "fix(runtime-core): properly diff slot node and fallback node\nclose #9200\r\nclose #9308\r\nclose #7256\r\n\r\nnote: \r\nBoth slot fallback and slot nodes are stable fragments but can not take the fast path.\r\n\r\nsolution:\r\n- always unmount the old vnode and mount the new one."
+  },
+  "gold_slice": {
+    "file": [
+      "packages/runtime-core/src/helpers/renderSlot.ts",
+      "packages/runtime-core/src/renderer.ts",
+      "packages/runtime-core/src/vnode.ts"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__typescript__maintenance__bugfix__6a53360d.diff"
+  },
+  "build": {
+    "cmd_test": "npm test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "vuejs__core-9213"
+}

@@ -1,0 +1,34 @@
+{
+  "instance_id": "Multi-SWE-Bench/javascript/maintenance/bugfix/5b47b0dd",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "javascript"
+  ],
+  "repo": {
+    "origin": "github://iamkun/dayjs",
+    "commit_pre": "cc993f0a8d18d33c0137616b80adc86127ba3424"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "fix: fix weekYear plugin missing locale bug\nfix #1304"
+  },
+  "gold_slice": {
+    "file": [
+      "src/plugin/weekYear/index.js"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__javascript__maintenance__bugfix__5b47b0dd.diff"
+  },
+  "build": {
+    "cmd_test": "npm test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "iamkun__dayjs-1319"
+}

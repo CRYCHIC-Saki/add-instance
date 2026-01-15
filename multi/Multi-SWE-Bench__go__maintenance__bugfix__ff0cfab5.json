@@ -1,0 +1,34 @@
+{
+  "instance_id": "Multi-SWE-Bench/go/maintenance/bugfix/ff0cfab5",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "go"
+  ],
+  "repo": {
+    "origin": "github://cli/cli",
+    "commit_pre": "d21c11d774df552b9c36d3d35aa8eb12e5aebd55"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "Always show created gist privacy status.\nThe output of `gh gist create` shows the privacy status of the gist only when a filename is provided. We now show it unconditionally.\r\n\r\nFixes #7644\r\n\r\n<!--\r\n  Thank you for contributing to GitHub CLI!\r\n  To reference an open issue, please write this in your description: `Fixes #NUMBER`\r\n-->"
+  },
+  "gold_slice": {
+    "file": [
+      "pkg/cmd/gist/create/create.go"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__go__maintenance__bugfix__ff0cfab5.diff"
+  },
+  "build": {
+    "cmd_test": "go test ./..."
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "cli__cli-7645"
+}

@@ -1,0 +1,34 @@
+{
+  "instance_id": "Multi-SWE-Bench/go/maintenance/bugfix/0f79e39c",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "go"
+  ],
+  "repo": {
+    "origin": "github://cli/cli",
+    "commit_pre": "7e8348a68f96c5983251f89871167797545dbbe0"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "remove gist description from single file raw view (#2886)\nthis closes #2886"
+  },
+  "gold_slice": {
+    "file": [
+      "pkg/cmd/gist/view/view.go"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__go__maintenance__bugfix__0f79e39c.diff"
+  },
+  "build": {
+    "cmd_test": "go test ./..."
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "cli__cli-2888"
+}

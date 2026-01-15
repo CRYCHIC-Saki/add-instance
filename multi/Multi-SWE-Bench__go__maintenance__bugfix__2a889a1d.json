@@ -1,0 +1,34 @@
+{
+  "instance_id": "Multi-SWE-Bench/go/maintenance/bugfix/2a889a1d",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "go"
+  ],
+  "repo": {
+    "origin": "github://cli/cli",
+    "commit_pre": "eb1b9122d8d7984fc33656e5ef90bb5b2b29e9df"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "misc scriptability improvements\nA very minor PR to avoid printing extraneous info when not attached to a tty. It's arguable this\r\nwasn't worth the effort.\r\n\r\nCloses #1300\r\nPart of #1082, #939"
+  },
+  "gold_slice": {
+    "file": [
+      "command/alias.go"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__go__maintenance__bugfix__2a889a1d.diff"
+  },
+  "build": {
+    "cmd_test": "go test ./..."
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "cli__cli-1387"
+}

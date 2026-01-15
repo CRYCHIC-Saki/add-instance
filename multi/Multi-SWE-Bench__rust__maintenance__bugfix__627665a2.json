@@ -1,0 +1,44 @@
+{
+  "instance_id": "Multi-SWE-Bench/rust/maintenance/bugfix/627665a2",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "rust"
+  ],
+  "repo": {
+    "origin": "github://clap-rs/clap",
+    "commit_pre": "c4780e3305b4c2632c7d843511ae7dfe3652a569"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "ArgValue builder\nThrough the ArgValue it is possible:\r\n\r\n* `hide` possible_values from showing in completion, help and validation\r\n* add `about` to possible_values in completion\r\n\r\nThis PR only includes the builder, for the derive macro see #2762 \r\n\r\npartly fixes #2756\r\npartly fixes #2731"
+  },
+  "gold_slice": {
+    "file": [
+      "clap_derive/src/derives/args.rs",
+      "clap_generate/examples/value_hints.rs",
+      "clap_generate/src/generators/shells/bash.rs",
+      "clap_generate/src/generators/shells/fish.rs",
+      "clap_generate/src/generators/shells/zsh.rs",
+      "examples/11_only_specific_values.rs",
+      "examples/13_enum_values.rs",
+      "src/lib.rs",
+      "src/output/help.rs",
+      "src/parse/arg_matcher.rs",
+      "src/parse/validator.rs"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__rust__maintenance__bugfix__627665a2.diff"
+  },
+  "build": {
+    "cmd_test": "cargo test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "clap-rs__clap-2758"
+}

@@ -1,0 +1,34 @@
+{
+  "instance_id": "Multi-SWE-Bench/typescript/maintenance/bugfix/73fc043b",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "typescript"
+  ],
+  "repo": {
+    "origin": "github://mui/material-ui",
+    "commit_pre": "414c2ad63dd766587ca1ae786fdf0b879976a242"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "[Autocomplete] Fix clearing single array values\nResolves #32272 \r\n\r\n<!-- Thanks so much for your PR, your contribution is appreciated! ❤️ -->\r\n\r\n- [x] I have followed (at least) the [PR section of the contributing guide](https://github.com/mui/material-ui/blob/HEAD/CONTRIBUTING.md#sending-a-pull-request)."
+  },
+  "gold_slice": {
+    "file": [
+      "packages/mui-base/src/AutocompleteUnstyled/useAutocomplete.js"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__typescript__maintenance__bugfix__73fc043b.diff"
+  },
+  "build": {
+    "cmd_test": "npm test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "mui__material-ui-32626"
+}

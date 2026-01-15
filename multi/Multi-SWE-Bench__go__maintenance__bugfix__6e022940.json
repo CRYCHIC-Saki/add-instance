@@ -1,0 +1,35 @@
+{
+  "instance_id": "Multi-SWE-Bench/go/maintenance/bugfix/6e022940",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "go"
+  ],
+  "repo": {
+    "origin": "github://cli/cli",
+    "commit_pre": "157bab18e4c9f9f6f6306c39aa1964d04ec94a71"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "Adds the ability to list environment secrets - gh secret list -e dev\nFirst time contributor here, so excuse me if I missed anything in the guidelines.\r\n\r\nThis fixes #3265\r\n\r\nEnvironment Secrets are not included in gh secret list. This adds a new flag to gh secret list called env (-e) which takes in a string that correlates with your environment secrets name. The output is the same as gh secret list, but it only includes the environment secrets.\r\n\r\nHere is the command and the output:\r\n![image](https://user-images.githubusercontent.com/4313815/111887145-70cea000-89a9-11eb-99b0-0ab8aba94cac.png)\r\n\r\nThis is just a draft because I'm sure I'm missing things and I would lo have some guidance."
+  },
+  "gold_slice": {
+    "file": [
+      "pkg/cmd/secret/list/list.go",
+      "pkg/cmd/secret/secret.go"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__go__maintenance__bugfix__6e022940.diff"
+  },
+  "build": {
+    "cmd_test": "go test ./..."
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "cli__cli-3270"
+}

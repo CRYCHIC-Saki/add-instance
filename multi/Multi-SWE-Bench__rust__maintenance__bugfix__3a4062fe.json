@@ -1,0 +1,34 @@
+{
+  "instance_id": "Multi-SWE-Bench/rust/maintenance/bugfix/3a4062fe",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "rust"
+  ],
+  "repo": {
+    "origin": "github://tokio-rs/tokio",
+    "commit_pre": "43c224ff47e41628ca787d116080d69bd7030c3f"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "fix select macro to process 64 branches\nCloses #4501\r\n\r\n## Motivation\r\n\r\nFix the bug wherein select macro fails with input of 64 branches.\r\n\r\n## Solution\r\n\r\nFix the count macro to handle 64 branches. Before the fix, count macro will not expand when the input has 64 branches and will fail with compile error."
+  },
+  "gold_slice": {
+    "file": [
+      "tokio/src/macros/select.rs"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__rust__maintenance__bugfix__3a4062fe.diff"
+  },
+  "build": {
+    "cmd_test": "cargo test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "tokio-rs__tokio-4519"
+}

@@ -1,0 +1,37 @@
+{
+  "instance_id": "Multi-SWE-Bench/c/maintenance/bugfix/9a7be8ba",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "c"
+  ],
+  "repo": {
+    "origin": "github://facebook/zstd",
+    "commit_pre": "eb3a7a38270dc2a1f533c1b347f8b9b56e789f8f"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "[libzstd] Rename ZSTD_CCtxParam_* to ZSTD_CCtxParams_*\n* Renames functions to `ZSTD_CCtxParams_*`.\r\n* The CI will test that everything still builds, and that I didn't miss a call-site.\r\n* I've left the `ZSTDMT_` functions alone, since they are only here for compatibility, so it would be silly to rename them. Side question, when do we want to deprecate/delete these?\r\n\r\nFixes #1529."
+  },
+  "gold_slice": {
+    "file": [
+      "CHANGELOG",
+      "lib/compress/zstd_compress.c",
+      "lib/compress/zstdmt_compress.c",
+      "lib/zstd.h"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__c__maintenance__bugfix__9a7be8ba.diff"
+  },
+  "build": {
+    "cmd_test": "make test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "facebook__zstd-1532"
+}

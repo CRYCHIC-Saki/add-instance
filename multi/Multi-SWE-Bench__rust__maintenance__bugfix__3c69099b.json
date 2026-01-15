@@ -1,0 +1,39 @@
+{
+  "instance_id": "Multi-SWE-Bench/rust/maintenance/bugfix/3c69099b",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "rust"
+  ],
+  "repo": {
+    "origin": "github://clap-rs/clap",
+    "commit_pre": "17ec7757891a38965e8492f7a0a48e674a9536eb"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "feat: Stablize multicall\n`multicall` allows you to have one binary expose itself as multiple\r\nprograms, like busybox does.  This also works well for user clap for\r\nparsing REPLs.\r\n\r\nFixes #2861\r\n\r\n<!--\r\nThanks for helping out!\r\n\r\nPlease link the appropriate issue from your PR.\r\n\r\nIf you don't have an issue, we'd recommend starting with one first so the PR can focus on the\r\nimplementation (unless its an obvious bug or documentation fix that will have\r\nlittle conversation).\r\n-->"
+  },
+  "gold_slice": {
+    "file": [
+      "Cargo.toml",
+      "Makefile",
+      "README.md",
+      "examples/multicall-busybox.rs",
+      "examples/multicall-hostname.rs",
+      "examples/repl.rs"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__rust__maintenance__bugfix__3c69099b.diff"
+  },
+  "build": {
+    "cmd_test": "cargo test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "clap-rs__clap-3684"
+}

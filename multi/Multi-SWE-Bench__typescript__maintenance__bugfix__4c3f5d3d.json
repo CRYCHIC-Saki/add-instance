@@ -1,0 +1,34 @@
+{
+  "instance_id": "Multi-SWE-Bench/typescript/maintenance/bugfix/4c3f5d3d",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "typescript"
+  ],
+  "repo": {
+    "origin": "github://mui/material-ui",
+    "commit_pre": "d9e863562f735bc798adfe20a63faa919a4fddd4"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "[system] Fix parsing of hsla colors in getLuminance\n<!-- Thanks so much for your PR, your contribution is appreciated! ❤️ -->\r\n\r\nFixes #34438\r\n\r\n- [x] I have followed (at least) the [PR section of the contributing guide](https://github.com/mui/material-ui/blob/HEAD/CONTRIBUTING.md#sending-a-pull-request)."
+  },
+  "gold_slice": {
+    "file": [
+      "packages/mui-system/src/colorManipulator.js"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__typescript__maintenance__bugfix__4c3f5d3d.diff"
+  },
+  "build": {
+    "cmd_test": "npm test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "mui__material-ui-34437"
+}

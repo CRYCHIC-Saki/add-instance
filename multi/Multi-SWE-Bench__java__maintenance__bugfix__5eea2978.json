@@ -1,0 +1,35 @@
+{
+  "instance_id": "Multi-SWE-Bench/java/maintenance/bugfix/5eea2978",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "java"
+  ],
+  "repo": {
+    "origin": "github://fasterxml/jackson-core",
+    "commit_pre": "315ac5ad2ad5228129a3df50623570d9bc2d7045"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "Fix #1015: JsonFactory always respects `CANONICALIZE_FIELD_NAMES`\nPreviously a subset of methods did not check for\r\n`CANONICALIZE_FIELD_NAMES` in the factory features configuration.\r\n\r\nI would appreciate an opinion on whether or not you'd prefer an update to `UTF8StreamJsonParser` to support a non-canonicalizing ByteQuadsCanonicalizer. Currently we don't use this parser with a non-canonicalizing parser because it underperforms on large input and I don't have any intention of changing that, however it may be a footgun to fail if that ever changes in a refactor. Failure would likely cause us to re-discover that the reader-based implementation is a better fit when canonicalization is disabled in the new path which is a plus, but potential instability in the interim wouldn't be ideal. I've left the class as is for now, keeping this change as minimal as possible."
+  },
+  "gold_slice": {
+    "file": [
+      "src/main/java/com/fasterxml/jackson/core/JsonFactory.java",
+      "src/main/java/com/fasterxml/jackson/core/json/UTF8DataInputJsonParser.java"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__java__maintenance__bugfix__5eea2978.diff"
+  },
+  "build": {
+    "cmd_test": "mvn -q test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "fasterxml__jackson-core-1016"
+}

@@ -1,0 +1,35 @@
+{
+  "instance_id": "Multi-SWE-Bench/go/maintenance/bugfix/3deeea9c",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "go"
+  ],
+  "repo": {
+    "origin": "github://cli/cli",
+    "commit_pre": "b5366c6ebf22589f62089ea79c349538335a3e99"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "Add --no-maintainer-edit flag\nCloses #2213 while retaining backwards compatibility.\n\nThis PR adds no additional tests, as the change is mostly related to the server implementation and not the client implementation.\nFurthermore i could not verify it's behavior using a local repository (e.g. the Web UI did not show it as a maintainer and PR requester).\n\nUsing the CLI to push it right now though :)"
+  },
+  "gold_slice": {
+    "file": [
+      "api/queries_pr.go",
+      "pkg/cmd/pr/create/create.go"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__go__maintenance__bugfix__3deeea9c.diff"
+  },
+  "build": {
+    "cmd_test": "go test ./..."
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "cli__cli-2250"
+}

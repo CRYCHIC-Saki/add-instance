@@ -1,0 +1,35 @@
+{
+  "instance_id": "Multi-SWE-Bench/rust/maintenance/bugfix/37f525d2",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "rust"
+  ],
+  "repo": {
+    "origin": "github://clap-rs/clap",
+    "commit_pre": "15f01789d2a6b8952a01a8a3881b94aed4a44f4c"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "fix(help): ArgsRequiredElseHelp should ignore defaults\nFixes #1264\r\n\r\n<!--\r\nThanks for helping out!\r\n\r\nPlease link the appropriate issue from your PR.\r\n\r\nIf you don't have an issue, we'd recommend starting with one first so the PR can focus on the\r\nimplementation (unless its an obvious bug or documentation fix that will have\r\nlittle conversation).\r\n-->"
+  },
+  "gold_slice": {
+    "file": [
+      "src/parse/arg_matcher.rs",
+      "src/parse/validator.rs"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__rust__maintenance__bugfix__37f525d2.diff"
+  },
+  "build": {
+    "cmd_test": "cargo test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "clap-rs__clap-3421"
+}

@@ -1,0 +1,36 @@
+{
+  "instance_id": "Multi-SWE-Bench/javascript/maintenance/bugfix/d33de279",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "javascript"
+  ],
+  "repo": {
+    "origin": "github://sveltejs/svelte",
+    "commit_pre": "777d059b10ded7e0e4af0cfb837c9e00864b3ec2"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "fix: properly migrate imports types prefixed with $\n### Before submitting the PR, please make sure you do the following\r\n\r\nCloses #13973 \r\n\r\n- [x] It's really useful if your PR references an issue where it is discussed ahead of time. In many cases, features are absent for a reason. For large changes, please create an RFC: https://github.com/sveltejs/rfcs\r\n- [x] Prefix your PR title with `feat:`, `fix:`, `chore:`, or `docs:`.\r\n- [x] This message body should clearly illustrate what problems it solves.\r\n- [x] Ideally, include a test that fails without this PR but passes with it.\r\n\r\n### Tests and linting\r\n\r\n- [x] Run the tests with `pnpm test` and lint the project with `pnpm lint`"
+  },
+  "gold_slice": {
+    "file": [
+      ".changeset/wild-oranges-promise.md",
+      "packages/svelte/src/compiler/phases/2-analyze/visitors/shared/utils.js",
+      "packages/svelte/src/compiler/phases/scope.js"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__javascript__maintenance__bugfix__d33de279.diff"
+  },
+  "build": {
+    "cmd_test": "npm test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "sveltejs__svelte-14007"
+}

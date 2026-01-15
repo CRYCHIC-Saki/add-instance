@@ -1,0 +1,34 @@
+{
+  "instance_id": "Multi-SWE-Bench/go/maintenance/bugfix/8d23605c",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "go"
+  ],
+  "repo": {
+    "origin": "github://cli/cli",
+    "commit_pre": "727b72666713909d318f24f03065ce2e488566d5"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "Number and URL included in scriptable output\nAdds the PR number and the PR URL in the output provided to non-TTY outputs.\r\n\r\nCloses #1532\r\n\r\n<details open><summary>Example on this PR</summary>\r\n\r\n```\r\ntitle:\tNumber and URL included in scriptable output\r\nstate:\tOPEN\r\nauthor:\tdan1elhughes\r\nlabels:\t\r\nassignees:\t\r\nreviewers:\t\r\nprojects:\t\r\nmilestone:\t\r\nnumber:\t1580\r\nurl:\thttps://github.com/cli/cli/pull/1580\r\n--\r\nAdds the PR number and the PR URL in the output provided to non-TTY outputs.\r\n\r\nCloses #1532\r\n```\r\n</details>"
+  },
+  "gold_slice": {
+    "file": [
+      "pkg/cmd/pr/view/view.go"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__go__maintenance__bugfix__8d23605c.diff"
+  },
+  "build": {
+    "cmd_test": "go test ./..."
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "cli__cli-1580"
+}

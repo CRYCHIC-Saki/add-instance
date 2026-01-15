@@ -1,0 +1,35 @@
+{
+  "instance_id": "Multi-SWE-Bench/go/maintenance/bugfix/3da242a2",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "go"
+  ],
+  "repo": {
+    "origin": "github://cli/cli",
+    "commit_pre": "8288011149e71d5658b80ebef393522ba2d0e7cc"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "Fix: `gh gist view` and `gh gist edit` prompts with no TTY\nFixes #10042"
+  },
+  "gold_slice": {
+    "file": [
+      "pkg/cmd/gist/edit/edit.go",
+      "pkg/cmd/gist/view/view.go"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__go__maintenance__bugfix__3da242a2.diff"
+  },
+  "build": {
+    "cmd_test": "go test ./..."
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "cli__cli-10048"
+}

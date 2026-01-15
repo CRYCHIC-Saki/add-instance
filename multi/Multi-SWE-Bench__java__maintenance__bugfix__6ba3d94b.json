@@ -1,0 +1,35 @@
+{
+  "instance_id": "Multi-SWE-Bench/java/maintenance/bugfix/6ba3d94b",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "java"
+  ],
+  "repo": {
+    "origin": "github://fasterxml/jackson-core",
+    "commit_pre": "2b53cce78c6ca037938e6f26d6935c5f9b8c07dd"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "Add `JsonFactory.setStreamReadConstraints()`\nFix #962: add a direct set method for overriding `StreamReadConstraints`, in addition to preferred Builder method."
+  },
+  "gold_slice": {
+    "file": [
+      "release-notes/VERSION-2.x",
+      "src/main/java/com/fasterxml/jackson/core/JsonFactory.java"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__java__maintenance__bugfix__6ba3d94b.diff"
+  },
+  "build": {
+    "cmd_test": "mvn -q test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "fasterxml__jackson-core-964"
+}

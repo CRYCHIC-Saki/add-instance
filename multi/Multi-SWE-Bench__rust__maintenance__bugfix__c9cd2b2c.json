@@ -1,0 +1,34 @@
+{
+  "instance_id": "Multi-SWE-Bench/rust/maintenance/bugfix/c9cd2b2c",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "rust"
+  ],
+  "repo": {
+    "origin": "github://clap-rs/clap",
+    "commit_pre": "e3bfa50e8f451b31a00d99147d608607521419a3"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "Derived ArgEnum::from_str returns Err instead of panicking\nArgEnum is public so it is possible for users to call it with a non-variant input string.\r\n\r\nCloses #2528"
+  },
+  "gold_slice": {
+    "file": [
+      "clap_derive/src/derives/arg_enum.rs"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__rust__maintenance__bugfix__c9cd2b2c.diff"
+  },
+  "build": {
+    "cmd_test": "cargo test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "clap-rs__clap-2529"
+}

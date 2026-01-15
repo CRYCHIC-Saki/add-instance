@@ -1,0 +1,34 @@
+{
+  "instance_id": "Multi-SWE-Bench/typescript/maintenance/bugfix/898aa1de",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "typescript"
+  ],
+  "repo": {
+    "origin": "github://mui/material-ui",
+    "commit_pre": "6b9cee5d523304e0a8f3c8fd93a380d27be1df76"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "[material-ui][Rating] Fix the hover highlighting for spaced icons\n<!-- Thanks so much for your PR, your contribution is appreciated! ❤️ -->\r\n\r\n- [x] I have followed (at least) the [PR section of the contributing guide](https://github.com/mui/material-ui/blob/HEAD/CONTRIBUTING.md#sending-a-pull-request).\r\n\r\nFixes #26380\r\n\r\nThe hover calculation in the mousemove event only considered the icon width, leading to incorrect hover highlighting when there is spacing between icons. Proper hover calculation is achieved when we consider the container's width regardless of spacing or no spacing.\r\n\r\nBefore: https://codesandbox.io/s/clever-keldysh-k4wshp?file=/src/App.tsx\r\n\r\nAfter: https://codesandbox.io/s/material-ui-cra-ts-forked-2qjdhh"
+  },
+  "gold_slice": {
+    "file": [
+      "packages/mui-material/src/Rating/Rating.js"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__typescript__maintenance__bugfix__898aa1de.diff"
+  },
+  "build": {
+    "cmd_test": "npm test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "mui__material-ui-39775"
+}

@@ -1,0 +1,34 @@
+{
+  "instance_id": "Multi-SWE-Bench/go/maintenance/bugfix/74cafcca",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "go"
+  ],
+  "repo": {
+    "origin": "github://grpc/grpc-go",
+    "commit_pre": "45bd2846a34b039c5f1e69b7202f118687156b34"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "credentials/alts: fix panic detecting GCP environment\nAssume not running on GCP if dmi not present.\r\n\r\nfixes #2995"
+  },
+  "gold_slice": {
+    "file": [
+      "credentials/alts/utils.go"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__go__maintenance__bugfix__74cafcca.diff"
+  },
+  "build": {
+    "cmd_test": "go test ./..."
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "grpc__grpc-go-2996"
+}

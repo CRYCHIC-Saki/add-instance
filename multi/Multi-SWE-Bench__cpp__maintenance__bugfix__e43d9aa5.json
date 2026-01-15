@@ -1,0 +1,39 @@
+{
+  "instance_id": "Multi-SWE-Bench/cpp/maintenance/bugfix/e43d9aa5",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "cpp"
+  ],
+  "repo": {
+    "origin": "github://catchorg/Catch2",
+    "commit_pre": "979bbf03bb00bc55ca09783791b5091a2247df68"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "Allow quotes in CAPTURE arguments\nSimple fix to allow CAPTURE to handle string with comma. Also ignores\r\nbrackets in string. No quotation mark escaping is implemented, so `\"\\\"\"`\r\nand `'\"'` will still fail.\r\n\r\nFixes #1607 \r\n\r\nI can improve parsing algorithm to handle single and double quotes correctly, but that is probably overkill ..."
+  },
+  "gold_slice": {
+    "file": [
+      "include/internal/catch_message.cpp",
+      "projects/SelfTest/Baselines/compact.sw.approved.txt",
+      "projects/SelfTest/Baselines/console.std.approved.txt",
+      "projects/SelfTest/Baselines/console.sw.approved.txt",
+      "projects/SelfTest/Baselines/junit.sw.approved.txt",
+      "projects/SelfTest/Baselines/xml.sw.approved.txt"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__cpp__maintenance__bugfix__e43d9aa5.diff"
+  },
+  "build": {
+    "cmd_test": "make test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "catchorg__Catch2-1608"
+}

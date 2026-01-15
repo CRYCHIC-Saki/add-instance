@@ -1,0 +1,34 @@
+{
+  "instance_id": "Multi-SWE-Bench/rust/maintenance/bugfix/c363219b",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "rust"
+  ],
+  "repo": {
+    "origin": "github://BurntSushi/ripgrep",
+    "commit_pre": "4858267f3b97fe2823d2ce104c1f90ec93eee8d7"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "Fix a bug in literal extraction from exact-count repetition patterns\nCloses #1319."
+  },
+  "gold_slice": {
+    "file": [
+      "grep-regex/src/literal.rs"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__rust__maintenance__bugfix__c363219b.diff"
+  },
+  "build": {
+    "cmd_test": "cargo test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "BurntSushi__ripgrep-1367"
+}

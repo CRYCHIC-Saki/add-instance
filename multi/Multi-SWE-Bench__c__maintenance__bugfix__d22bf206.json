@@ -1,0 +1,37 @@
+{
+  "instance_id": "Multi-SWE-Bench/c/maintenance/bugfix/d22bf206",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "c"
+  ],
+  "repo": {
+    "origin": "github://ponylang/ponyc",
+    "commit_pre": "336000f438564ca2863d32685964ccd23ec9d174"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "Make non-sendable objects accessible as tag in recover\nLocals and parameters are now accessible as `tag` inside of recover expressions instead of being completely unreferenceable. This change also fixes #1385 as a side-effect.\r\n\r\nCloses #1385."
+  },
+  "gold_slice": {
+    "file": [
+      "CHANGELOG.md",
+      "src/libponyc/expr/call.c",
+      "src/libponyc/expr/postfix.c",
+      "src/libponyc/expr/reference.c"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__c__maintenance__bugfix__d22bf206.diff"
+  },
+  "build": {
+    "cmd_test": "make test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "ponylang__ponyc-1486"
+}

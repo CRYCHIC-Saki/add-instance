@@ -1,0 +1,37 @@
+{
+  "instance_id": "Multi-SWE-Bench/c/maintenance/bugfix/f9bb5442",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "c"
+  ],
+  "repo": {
+    "origin": "github://facebook/zstd",
+    "commit_pre": "df09d4318f0f4f06d76c1e288732f5f9b1d9f59a"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "fix #1241\nEnsure that first input position is valid for a match\r\neven during first usage of context\r\nby starting reference at 1\r\n(avoiding the problematic 0)."
+  },
+  "gold_slice": {
+    "file": [
+      "appveyor.yml",
+      "lib/Makefile",
+      "lib/compress/zstd_compress.c",
+      "programs/Makefile"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__c__maintenance__bugfix__f9bb5442.diff"
+  },
+  "build": {
+    "cmd_test": "make test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "facebook__zstd-1243"
+}

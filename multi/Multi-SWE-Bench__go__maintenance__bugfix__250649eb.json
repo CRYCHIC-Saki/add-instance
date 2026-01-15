@@ -1,0 +1,35 @@
+{
+  "instance_id": "Multi-SWE-Bench/go/maintenance/bugfix/250649eb",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "go"
+  ],
+  "repo": {
+    "origin": "github://cli/cli",
+    "commit_pre": "aecfc01e6911e0ed58e91f5072305f5441cc76fe"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "Fix setting environment secrets\nThis uses the correct public key when setting environment secrets.\r\nhttps://docs.github.com/en/rest/reference/actions#get-an-environment-public-key\r\n\r\nFixes #3831"
+  },
+  "gold_slice": {
+    "file": [
+      "pkg/cmd/secret/set/http.go",
+      "pkg/cmd/secret/set/set.go"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__go__maintenance__bugfix__250649eb.diff"
+  },
+  "build": {
+    "cmd_test": "go test ./..."
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "cli__cli-3832"
+}

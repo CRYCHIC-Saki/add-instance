@@ -1,0 +1,37 @@
+{
+  "instance_id": "Multi-SWE-Bench/rust/maintenance/bugfix/3be02163",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "rust"
+  ],
+  "repo": {
+    "origin": "github://clap-rs/clap",
+    "commit_pre": "135b15467eda2394b017f2a7d25cda1417c0feec"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "Requires and Conflicts should ignore default_value\nThis supersedes #3020 \r\n\r\nFixes #3076"
+  },
+  "gold_slice": {
+    "file": [
+      "src/output/usage.rs",
+      "src/parse/arg_matcher.rs",
+      "src/parse/matches/matched_arg.rs",
+      "src/parse/validator.rs"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__rust__maintenance__bugfix__3be02163.diff"
+  },
+  "build": {
+    "cmd_test": "cargo test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "clap-rs__clap-3420"
+}

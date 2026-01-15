@@ -1,0 +1,37 @@
+{
+  "instance_id": "Multi-SWE-Bench/cpp/maintenance/bugfix/fe080aac",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "cpp"
+  ],
+  "repo": {
+    "origin": "github://nlohmann/json",
+    "commit_pre": "ee32bfc1c263900d5c31cf8a8c5429048719e42a"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "Allow comparing default initialized iterators\nCloses #4493"
+  },
+  "gold_slice": {
+    "file": [
+      ".github/workflows/macos.yml",
+      "README.md",
+      "include/nlohmann/detail/iterators/iter_impl.hpp",
+      "single_include/nlohmann/json.hpp"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__cpp__maintenance__bugfix__fe080aac.diff"
+  },
+  "build": {
+    "cmd_test": "make test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "nlohmann__json-4512"
+}

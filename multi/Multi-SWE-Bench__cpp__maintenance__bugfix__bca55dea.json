@@ -1,0 +1,40 @@
+{
+  "instance_id": "Multi-SWE-Bench/cpp/maintenance/bugfix/bca55dea",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "cpp"
+  ],
+  "repo": {
+    "origin": "github://simdjson/simdjson",
+    "commit_pre": "35158257c6e79d908723f1a7023362a718579c4f"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "Provide current location in JSON input\nFixes #1685 \r\nThis provides the `current_location()` method which is called on document instances. It returns a `simdjson_result<const char *>` instance to the current location in the JSON input.  It also checks if the location is within bounds (before last structural index). If out of bounds, it returns an `INDEX_OUT_OF_BOUNDS` error which is probably not the correct error to return. I was unsure if there was a more appropriate error to return or if I should add an error specific for this."
+  },
+  "gold_slice": {
+    "file": [
+      "doc/basics.md",
+      "include/simdjson/error.h",
+      "include/simdjson/generic/ondemand/document-inl.h",
+      "include/simdjson/generic/ondemand/document.h",
+      "include/simdjson/generic/ondemand/json_iterator-inl.h",
+      "include/simdjson/generic/ondemand/json_iterator.h",
+      "src/internal/error_tables.cpp"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__cpp__maintenance__bugfix__bca55dea.diff"
+  },
+  "build": {
+    "cmd_test": "make test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "simdjson__simdjson-1695"
+}

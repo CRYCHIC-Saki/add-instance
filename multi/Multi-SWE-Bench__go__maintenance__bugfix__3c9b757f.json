@@ -1,0 +1,35 @@
+{
+  "instance_id": "Multi-SWE-Bench/go/maintenance/bugfix/3c9b757f",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "go"
+  ],
+  "repo": {
+    "origin": "github://cli/cli",
+    "commit_pre": "6e14426dfb076350796b6f081b27399a5f4be904"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "fix(release): discussion category with assets\n<!-- \r\n  Thank you for contributing to GitHub CLI!\r\n  To reference an open issue, please write this in your description: `Fixes #NUMBER`\r\n-->\r\n\r\n## Description\r\n\r\nFixes #4993\r\n\r\nwhen `--discussion-category` and additional assets are given at the same time, the created release doesn't contain the specified discussion.\r\n\r\n```sh\r\n$ gh release create abc/1.2.3-rc2 --discussion-category \"Announcements\" --generate-notes hello.txt\r\n```\r\n\r\nthere are two reasons for causing this bug.\r\n\r\n- the assets uploading process is creating draft release, uploading, and publish the release.\r\n- discussion-category doesn't included in draft release.\r\n\r\nin the draft creation phase, `discussion_category_name` is attached to the body but it is invalid 'cause the second reason.\r\nin the publish phase, `--discussion-category` is not included, so that the `--discussion-category` setting isn't applied to the created release.\r\n\r\n## Changes\r\n\r\nTo fix that, I just add `discussion_category_name` value in the publish release api's body."
+  },
+  "gold_slice": {
+    "file": [
+      "pkg/cmd/release/create/create.go",
+      "pkg/cmd/release/create/http.go"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__go__maintenance__bugfix__3c9b757f.diff"
+  },
+  "build": {
+    "cmd_test": "go test ./..."
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "cli__cli-5019"
+}

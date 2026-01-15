@@ -1,0 +1,35 @@
+{
+  "instance_id": "Multi-SWE-Bench/go/maintenance/bugfix/2fea5f6b",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "go"
+  ],
+  "repo": {
+    "origin": "github://cli/cli",
+    "commit_pre": "954689ea9f26e3131ca816285eee8930cd8aa835"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "Use HTTPS protocol for upstream remote on clone command\nFixes #5972"
+  },
+  "gold_slice": {
+    "file": [
+      "internal/config/config.go",
+      "pkg/cmd/repo/clone/clone.go"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__go__maintenance__bugfix__2fea5f6b.diff"
+  },
+  "build": {
+    "cmd_test": "go test ./..."
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "cli__cli-5973"
+}

@@ -1,0 +1,40 @@
+{
+  "instance_id": "Multi-SWE-Bench/cpp/maintenance/bugfix/41b108ee",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "cpp"
+  ],
+  "repo": {
+    "origin": "github://simdjson/simdjson",
+    "commit_pre": "74bb7b2533af3f063d0794fe3962fb5226c27751"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "Add comma separated value parsing as an option in iterate_many\n`iterate_many` can now parse comma separated documents.\r\n\r\nHowever, this mode will not support batched processing in chunks. This is because it is difficult to find the border between 2 documents efficiently when comma is used as the delimiter. Hence, the batch size is increased to be as large as the json passed in.\r\n\r\nIt is the user's responsibility to create a parser that has capacity large enough to handle the minimum batch size, failing which will return a capacity error. Because `allow_comma_separated` is a parameter after `batch_size` and defaulted to false, users enabling comma separated parsing will have to explicitly set the batch size and thus would be conscious to check that their parser's capacity is large enough to handle the batch size.\r\n\r\nThis closes #1999"
+  },
+  "gold_slice": {
+    "file": [
+      "doc/iterate_many.md",
+      "include/simdjson/generic/ondemand/document_stream-inl.h",
+      "include/simdjson/generic/ondemand/document_stream.h",
+      "include/simdjson/generic/ondemand/json_iterator-inl.h",
+      "include/simdjson/generic/ondemand/json_iterator.h",
+      "include/simdjson/generic/ondemand/parser-inl.h",
+      "include/simdjson/generic/ondemand/parser.h"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__cpp__maintenance__bugfix__41b108ee.diff"
+  },
+  "build": {
+    "cmd_test": "make test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "simdjson__simdjson-2016"
+}

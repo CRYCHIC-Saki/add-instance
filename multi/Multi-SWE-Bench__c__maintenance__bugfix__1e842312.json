@@ -1,0 +1,35 @@
+{
+  "instance_id": "Multi-SWE-Bench/c/maintenance/bugfix/1e842312",
+  "version": "v0.1",
+  "category": "maintenance",
+  "subcategory": "bugfix",
+  "languages": [
+    "c"
+  ],
+  "repo": {
+    "origin": "github://ponylang/ponyc",
+    "commit_pre": "f00f95b30dd68c7faaff0aa88508c218bc19f02b"
+  },
+  "instruction": {
+    "type": "issue",
+    "text": "Fix compiler crash on illegal read from '_'\nThis change moves a check from the verify pass to the expr pass in order to catch an illegal read from '_' in a function argument before trying to use said argument.\r\n\r\nCloses #2157."
+  },
+  "gold_slice": {
+    "file": [
+      "src/libponyc/expr/reference.c",
+      "src/libponyc/pass/verify.c"
+    ]
+  },
+  "gold_patch": {
+    "diff_uri": "patches/Multi-SWE-Bench__c__maintenance__bugfix__1e842312.diff"
+  },
+  "build": {
+    "cmd_test": "make test"
+  },
+  "verification": {
+    "kind": [
+      "unit"
+    ]
+  },
+  "original_instance_id": "ponylang__ponyc-2201"
+}
